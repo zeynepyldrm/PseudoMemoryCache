@@ -8,7 +8,7 @@ public interface IMemoryCache extends IBackup {
 
          String get(String key);
 
-         void update(KVInput kvInput);
+         void update(String key, String value);
 
          void delete(KVInput kvInput);
 

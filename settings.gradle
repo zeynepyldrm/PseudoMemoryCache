@@ -1,2 +1,6 @@
 rootProject.name = 'PseudoMemoryCache'
+include 'src:main:test'
+findProject(':src:main:test')?.name = 'test'
+include 'src:main:untitled'
+findProject(':src:main:untitled')?.name = 'untitled'
 

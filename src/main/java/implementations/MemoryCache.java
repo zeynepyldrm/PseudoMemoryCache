@@ -24,8 +24,11 @@ public class MemoryCache implements IMemoryCache {
     }
 
     @Override
-    public void update(KVInput kvInput) {
-        list.put(kvInput.getKey(), kvInput.getValue());
+    public void update(String key,String value) {
+
+        if(list.containsKey(key)) {
+            list.put(key,value);
+        }
     }
 
     @Override

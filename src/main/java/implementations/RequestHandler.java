@@ -32,7 +32,7 @@ public class RequestHandler implements IRequestHandler {
                     memoryCache.delete(kvInput);
                     System.out.printf("delete %s to key: %s \n", kvInput.getValue(), kvInput.getKey());
                 case "PUT" :
-                    memoryCache.update(kvInput);
+                    memoryCache.update(kvInput.getKey(), kvInput.getValue());
             }
             httpExchange.sendResponseHeaders(200, 0);
             httpExchange.close();
